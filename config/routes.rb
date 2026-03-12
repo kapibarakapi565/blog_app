@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # 新規投稿ページ
   get 'posts/new', to:'posts#new'
 
+  post 'posts', to: 'posts#create'
+
   get "up" => "rails/health#show", as: :rails_health_check
 
 end
