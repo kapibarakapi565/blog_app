@@ -1,2 +1,9 @@
 <h1>ブログ記事一覧</h1>
 <%= link_to '新規投稿', '/posts/new' %>
+<% @posts.each do |post| %>
+  <div>
+    <%= post.title %>
+    <%= post.content %>
+    <%= post.created_at %>
+  </div>
+<% end %>
