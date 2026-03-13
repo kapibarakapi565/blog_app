@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
   
-  # 一覧ページ
-  get 'posts', to:'posts#index'
-
-  # 新規投稿ページ
-  get 'posts/new', to:'posts#new'
-
-  post 'posts', to: 'posts#create'
+  resources :posts, only: [:index, :new, :create, :destroy]
 
   get "up" => "rails/health#show", as: :rails_health_check
 
