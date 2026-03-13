@@ -5,6 +5,7 @@
     <%= post.title %>
     <%= post.content %>
     <%= post.created_at %>
+    <%= link_to '編集', edit_post_path(post.id) %>
     <%= link_to '削除', post_path(post.id), data: {turbo_method: :delete } %>
   </div>
 <% end %>
