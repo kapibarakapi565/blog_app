@@ -1,6 +1,9 @@
-<h1>新規投稿</h1>
-<%= form_with url:'/posts', method: :post,local:true do |form| %>
- <%= form.text_field :title %>
- <%= form.text_area :content %>
- <%= form.submit '投稿する' %>
-<% end %>
+<h1 class="page-title">新規投稿</h1>
+<div class="form-card">
+  <%= form_with url:'/posts', method: :post,local:true do |form| %>
+   <%= form.text_field :title, class: "input" %>
+   <%= form.text_area :content, class: "textarea" %>
+   <%= form.submit '投稿する', class: "btn" %>
+  <% end %>
+</div>
+<%= link_to '記事一覧へ戻る', posts_path %>
