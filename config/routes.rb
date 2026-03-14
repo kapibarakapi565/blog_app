@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :posts, only: [:index, :new, :create, :destroy, :edit,:update]
+  resources :posts
 
   get "up" => "rails/health#show", as: :rails_health_check
 
