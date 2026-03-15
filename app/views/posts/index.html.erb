@@ -1,5 +1,4 @@
 <h1 class="page-title">ブログ記事一覧</h1>
-<%= link_to '新規投稿', '/posts/new', class: "btn"%>
 <% @posts.each do |post| %>
   <div class="post-card">
     <h2 class="post-title">
@@ -8,8 +7,10 @@
     <%= post.created_at.strftime("%Y-%m-%d %H:%M")%>
     <div class="post-actions">
       <%= link_to '詳細', post_path(post.id)%>
+      <% if user_signed_in? %>
       <%= link_to '編集', edit_post_path(post.id), class: "edit" %>
       <%= link_to '削除', post_path(post.id), data: {turbo_method: :delete }, class: "delete" %>
+      <% end %>
     </div>
   </div>
 <% end %>
