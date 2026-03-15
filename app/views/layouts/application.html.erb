@@ -10,7 +10,8 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <header>
+    <header class="header">
+      <h1>Kapibara Blog</h1>
       <% if user_signed_in? %>
         <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }%>
         <%= link_to "新規投稿", new_post_path, class: "btn"%>
@@ -19,7 +20,7 @@
       <% end %>
     </header>
     <%= yield %>
-    <footer>
+    <footer class="footer">
       <p>
         Copyright Kapibara Blog 2026.
       </p>

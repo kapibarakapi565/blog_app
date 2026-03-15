@@ -1,3 +1,15 @@
+/* application.html.erb*/
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer {
+  text-align: center;
+}
+
 /* 記事一覧画面 */
 .page-title {
   font-size: 28px;
