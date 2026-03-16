@@ -1,6 +1,6 @@
 <h1 class="page-title">新規投稿</h1>
 <div class="form-card">
-  <%= form_with url:'/posts', method: :post,local:true do |form| %>
+  <%= form_with model: @post,local: true do |form| %>
    <%= form.text_field :title, class: "input" %>
    <%= form.text_area :content, class: "textarea" %>
    <%= form.submit '投稿する', class: "btn" %>

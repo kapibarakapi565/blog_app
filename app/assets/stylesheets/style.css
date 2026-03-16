@@ -22,19 +22,30 @@
   border-radius: 10px;
   margin-bottom: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .post-title {
   margin: 0 0 10px 0;
   font-size: 20px;
 }
+.menu-icon{
+  list-style: none;
+}
 
+.post-actions{
+  list-style: none;
+}
 .post-actions a {
   margin-left: 10px;
   text-decoration: none;
+  
 }
 
-.edit {
-  color: #3b82f6;
+.edit,
+.show{
+  color: #333;
 }
 
 .delete {
@@ -78,4 +89,12 @@
   padding: 10px 16px;
   border-radius: 6px;
   text-decoration: none;
+}
+/* 詳細画面 */
+.post-card-show{
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }

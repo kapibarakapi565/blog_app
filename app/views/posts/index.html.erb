@@ -1,16 +1,27 @@
 <h1 class="page-title">ブログ記事一覧</h1>
 <% @posts.each do |post| %>
   <div class="post-card">
-    <h2 class="post-title">
-      <%= post.title %>
-    </h2>
-    <%= post.created_at.strftime("%Y-%m-%d %H:%M")%>
-    <div class="post-actions">
-      <%= link_to '詳細', post_path(post.id)%>
-      <% if user_signed_in? %>
-      <%= link_to '編集', edit_post_path(post.id), class: "edit" %>
-      <%= link_to '削除', post_path(post.id), data: {turbo_method: :delete }, class: "delete" %>
-      <% end %>
+    <div class="post-content">
+      <h2 class="post-title">
+        <%= post.title %>
+      </h2>
+      <%= post.created_at.strftime("%Y-%m-%d %H:%M")%>
     </div>
+    <details>
+      <summary class="menu-icon">...</summary>
+      <ul class="post-actions">
+        <li>
+          <%= link_to '詳細', post_path(post.id), class: "show" %>
+        </li>
+        <% if user_signed_in? %>
+        <li>
+          <%= link_to '編集', edit_post_path(post.id), class: "edit" %>
+        </li>
+        <li>
+          <%= link_to '削除', post_path(post.id), data: {turbo_method: :delete }, class: "delete" %>
+        </li>
+        <% end %>
+      </ul>
+    </details>
   </div>
 <% end %>
