@@ -98,3 +98,33 @@
   margin-bottom: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+/* ログイン画面 */
+.signup-container,
+.login-container{
+  max-width:400px;
+  margin:60px auto;
+  padding:30px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  background:#fff;
+}
+.form-group{
+  margin-bottom:15px;
+}
+
+.form-input{
+  width:100%;
+  padding:8px;
+  border:1px solid #ccc;
+  border-radius:4px;
+}
+
+.signup-button,
+.login-button{
+  width:100%;
+  padding:10px;
+  background:#3b82f6;
+  color:white;
+  border:none;
+  border-radius:4px;
+}
