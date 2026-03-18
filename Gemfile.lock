@@ -151,6 +151,8 @@ GEM
       prism (~> 1.5)
     msgpack (1.8.0)
     mutex_m (0.3.0)
+    mysql2 (0.5.7)
+      bigdecimal
     net-imap (0.6.3)
       date
       net-protocol
@@ -285,6 +287,7 @@ DEPENDENCIES
   devise
   importmap-rails
   jbuilder
+  mysql2
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.6)
