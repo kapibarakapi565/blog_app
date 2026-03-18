@@ -1,5 +1,6 @@
 <div class="post-card-show">
   <h2><%= @post.title %></h2>
+  <%= image_tag @post.image if @post.image.attached? %>
   <p><%= @post.content %></p>
   <p><%= @post.created_at.strftime("%Y-%m-%d %H:%M")%></p>
 </div>
